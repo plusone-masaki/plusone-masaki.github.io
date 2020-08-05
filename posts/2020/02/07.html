@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chromiumベースの新生Edgeブラウザを試してみた | Plus one</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <script data-ad-client="ca-pub-9835503912749997" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async="true"></script>
+    <meta name="description" content="フリーランスWebエンジニアMasakiの技術ブログ">
+    <meta property="article:published_time" content="2020-02-07T22:09:00.000Z">
+    <meta property="article:modified_time" content="2020-08-05T02:30:07.000Z">
+    <meta property="og:site_name" content="Plus one">
+    <meta property="og:title" content="Chromiumベースの新生Edgeブラウザを試してみた">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/posts/2020/02/07.html">
+    <meta property="og:image" content="https://res.cloudinary.com/plus-one-tech/image/upload/l_text:Sawarabi%20Gothic_36_bold:Chromiumベースの新生Edgeブラウザを試してみた,co_rgb:568,y_-24,w_512,c_fit/v1588954091/plusone_tech_ogp.png">
+    <meta name="twitter:title" content="Chromiumベースの新生Edgeブラウザを試してみた">
+    <meta name="twitter:url" content="/posts/2020/02/07.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://res.cloudinary.com/plus-one-tech/image/upload/l_text:Sawarabi%20Gothic_36_bold:Chromiumベースの新生Edgeブラウザを試してみた,co_rgb:568,y_-24,w_512,c_fit/v1588954091/plusone_tech_ogp.png">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="ブラウザ">
+    <meta property="article:tag" content="ブラウザ">
+    <meta property="twitter:site" content="@plus_one_masaki">
+    <meta property="fb:app_id" content="275537106407219">
+    <link rel="preload" href="/assets/css/0.styles.d70150a1.css" as="style"><link rel="preload" href="/assets/js/app.d58d3548.js" as="script"><link rel="preload" href="/assets/js/10.b08ee81d.js" as="script"><link rel="preload" href="/assets/js/21.e96ada51.js" as="script"><link rel="prefetch" href="/assets/js/1.9c90b238.js"><link rel="prefetch" href="/assets/js/11.8f577b34.js"><link rel="prefetch" href="/assets/js/12.9acec07f.js"><link rel="prefetch" href="/assets/js/13.bf5d61d6.js"><link rel="prefetch" href="/assets/js/14.f78eeef3.js"><link rel="prefetch" href="/assets/js/15.d8cd59f7.js"><link rel="prefetch" href="/assets/js/16.551fb714.js"><link rel="prefetch" href="/assets/js/17.21d87462.js"><link rel="prefetch" href="/assets/js/18.3c5d0881.js"><link rel="prefetch" href="/assets/js/19.faa3d6d0.js"><link rel="prefetch" href="/assets/js/20.daa17a5e.js"><link rel="prefetch" href="/assets/js/22.754d0b93.js"><link rel="prefetch" href="/assets/js/23.7845d321.js"><link rel="prefetch" href="/assets/js/24.c9378d18.js"><link rel="prefetch" href="/assets/js/25.b5fe7aea.js"><link rel="prefetch" href="/assets/js/26.943388c3.js"><link rel="prefetch" href="/assets/js/27.3de3583b.js"><link rel="prefetch" href="/assets/js/28.c99205f2.js"><link rel="prefetch" href="/assets/js/29.de90b8a2.js"><link rel="prefetch" href="/assets/js/3.ab87d521.js"><link rel="prefetch" href="/assets/js/30.8137446f.js"><link rel="prefetch" href="/assets/js/31.8646e7f2.js"><link rel="prefetch" href="/assets/js/32.e950dc9e.js"><link rel="prefetch" href="/assets/js/33.0ee0e7a0.js"><link rel="prefetch" href="/assets/js/34.dbb85b96.js"><link rel="prefetch" href="/assets/js/35.95b53870.js"><link rel="prefetch" href="/assets/js/36.30e5a508.js"><link rel="prefetch" href="/assets/js/4.caf53fb0.js"><link rel="prefetch" href="/assets/js/5.db228212.js"><link rel="prefetch" href="/assets/js/6.009be067.js"><link rel="prefetch" href="/assets/js/7.89a913f6.js"><link rel="prefetch" href="/assets/js/8.41d3bbae.js"><link rel="prefetch" href="/assets/js/9.63cfa784.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d70150a1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-aa0aa392><div data-v-2d8d321e data-v-aa0aa392><nav class="navbar" data-v-2d8d321e><div class="container" data-v-2d8d321e><a href="/" class="router-link-active" data-v-2d8d321e><img src="/logo.png" alt="Plus one" class="logo" data-v-2d8d321e> <!----></a> <div class="navbar-toggler" data-v-2d8d321e><svg class="icon" style="font-size:2rem;" data-v-2d8d321e data-v-2d8d321e><title data-v-2d8d321e data-v-2d8d321e>menu</title><use xlink:href="#icon-menu" data-v-2d8d321e data-v-2d8d321e></use></svg></div> <div class="navbar-links" data-v-2d8d321e><a href="/" class="navbar-link" data-v-2d8d321e>
+            Home
+          </a><a href="/about/" class="navbar-link" data-v-2d8d321e>
+            About
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-2d8d321e>
+            Blog
+          </a><a href="/products/" class="navbar-link" data-v-2d8d321e>
+            Products
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-2d8d321e></div></div></header> <div class="container clearfix show-aside" data-v-36f1d234 data-v-36f1d234><main class="main" data-v-36f1d234><div class="post" data-v-36f1d234 data-v-36f1d234><section class="post-meta main-div" data-v-24dc112d><section class="post-date clearfix" data-v-24dc112d><span class="create-date" data-v-24dc112d>
+      作成日 : 2020-02-07
+    </span> <span class="update-date" data-v-24dc112d>
+      更新日 : 2020-08-05
+    </span></section> <section class="post-links" data-v-24dc112d><a href="/posts/2020/01/24.html" class="post-link" data-v-24dc112d>
+      前の記事 : Twitterシェアボタンを設置しました！
+    </a> <a href="/posts/2020/02/12.html" class="post-link" data-v-24dc112d>
+      次の記事 : 数億円規模の案件を たった二人で開発させられた話
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h1 id="chromiumベースの新生edgeブラウザを試してみた"><a href="#chromiumベースの新生edgeブラウザを試してみた" class="header-anchor">#</a> Chromiumベースの新生Edgeブラウザを試してみた</h1> <p>2020年1月15日にリリースされた、新しいEdgeブラウザを遅ればせながら触ってみたので、そのレビューをしてみたいと思います。</p> <h2 id="前置き"><a href="#前置き" class="header-anchor">#</a> 前置き</h2> <p>数年前まではChromeを始め, Firefox, 先代Edgeなど多種多様なブラウザが熾烈なシェア争いをしていたものですが、
+ここ最近はほぼChromeが世界シェア60％台後半をキープし続け、その他はほぼ横ばいといった状況で落ち着いて来ていました。</p> <p>ブラウザシェア戦争はChromeの一人勝ちで終焉を迎えたわけです。</p> <p>今回EdgeをChromiumベースで作り変えたのも、ブラウザ戦争を盛り返すためなんかじゃなく、
+開発コストの削減と他ブラウザとの互換性維持、そしてInternet Explorerの世代交代を担っているものと思われます。</p> <p>そこで今回は、主に<strong>IEからの世代交代</strong>を見据えた形でレビューをしていこうと思います。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>官公庁等、お堅い系の企業がIEを使い続ける理由の一つとして、
+プライバシー、セキュリティ等が担保できるかどうかが挙げられます。</p> <p>モダンブラウザは使用状況などの個人情報をあらゆる方法で収集するので、
+機密を扱う企業では採用が進んでいないということなんですね。</p></div> <h2 id="使い勝手"><a href="#使い勝手" class="header-anchor">#</a> 使い勝手</h2> <p>Chromiumベースだけあって基本的に使い勝手はChromeと変わらないです。速度感もメモリ消費もあまり差は感じませんね。</p> <p>最近のブラウザはどれも表示領域確保のためにロゴなども削られているので、見た目に関してもぱっと見では判別つかないレベル。</p> <p>開発者ツールもChromeと同じっぽい。Firefoxはエラーメッセージとかが日本語になるので、
+英語が読めなくて翻訳してもニュアンスがつかめないときなんかに（ものすごく用途が限られてますが）重宝したりするんですが、
+Edgeに関してはChromeと併用する意味はたぶんゼロですね。</p> <p>現状ではOfficeなどMS系のソフトウェアとの連携についても特に優位性はないみたい。</p> <p>逆に言うと、天下のChromeとUIやページの表示が共通であることで、
+今までIE対応に泣かされ、Edgeでも微妙に未対応のCSSがあったりして、
+無駄な工数を割かれていた僕ら開発者にとっては非常に喜ばしいことです。</p> <p>IE対応というだけで開発の見積り3倍とかになったりすることもあるそうなので、
+ユーザーから見てもその辺りはプラスとみてもいいんじゃないでしょうか。
+（もちろんこの世からIEがなくなるという前提だけど）</p> <h2 id="プライバシーとセキュリティ"><a href="#プライバシーとセキュリティ" class="header-anchor">#</a> プライバシーとセキュリティ</h2> <p>Chromeとの最大の差別化ポイントであり、IEの後継たりえるかどうかがここで決まるんじゃないかと思います。</p> <div class="custom-block tip"><p class="custom-block-title">Chromeのプライバシー設定画面</p> <p><img src="/images/20200207/c_01.png" alt="Chromeのプライバシー設定画面"></p></div> <p>ご存じChromeはやはり様々な項目を収集しようとしているのがこの画像からもわかると思います。
+設定画面で全てを拒否したつもりでも、位置情報などを送信する設定になっていたり、個人情報が駄々洩れなのがわかりました。</p> <p>また、トラッキングをブロックする設定がないことも特徴です。（トラッキング拒否リクエストはトラッキングをブロックするものではないです）</p> <div class="custom-block tip"><p class="custom-block-title">Firefoxのプライバシー設定画面</p> <p><img src="/images/20200207/f_01.png" alt="Firefoxのプライバシー設定画面"></p> <p><img src="/images/20200207/f_02.png" alt="Firefoxのプライバシー設定画面"></p></div> <p>お次はブラウザシェアNo2のFirefoxです。
+ブラウザ戦争の真っ只中に、Chromeに対抗する形で個人情報の保護を宣言していたのが記憶に新しいですね。</p> <p>こちらでまず大きく目についたのが「トラッキング防止機能」。
+UXと安全性を両立する「標準」と、プライバシー保護に特化した「厳格」、そして「カスタム」の3種類です。</p> <p>厳格モードであっても、世の中のすべてのトラッキングを防げる保証はないですが、
+Chromeと比べて個人情報保護に対してきちんと考えてるんだなーっていうのを感じますね。</p> <p>また個人情報収集の設定に関しても「私たちは、個人情報を受け取る前に、常にユーザーの許可を求めます。」って謙虚だなぁーって感じですね。</p> <p class="large red">「私たちは、個人情報を受け取る前に、常にユーザーの許可を求めます。」</p> <p>ですって。</p> <p>なんだかんだFirefox結構やるじゃん。</p> <div class="custom-block tip"><p class="custom-block-title">新生Edgeのプライバシー設定画面</p> <p><img src="/images/20200207/e_01.png" alt="新生Edgeのプライバシー設定画面"></p> <p><img src="/images/20200207/e_02.png" alt="新生Edgeのプライバシー設定画面"></p></div> <p>見た感じはFirefoxとよく似てますが、細かなところに差が見えますね。</p> <p>まず、トラッキング防止機能が「基本」「バランス」「厳重」の3種類。</p> <p>更に、ブロックしたトラッカーとブロック回数が見れます。
+数ページ見ただけでGoogleのトラッカーがとんでもない数ブロックされてるのがわかりますｗ</p> <p>また、個人情報収集設定にある「Windows 診断データの設定」の部分がリンクになってますが、
+これをクリックするとWindowsの設定アプリが開きます。
+細かいところでOSとの親和性を持ってるのはMSらしさというか。</p> <p>機能としては一通りそろっていて安心できる印象はありますが、Firefoxの
+<span class="large red">「私たちは、個人情報を受け取る前に、常にユーザーの許可を求めます。」</span>
+という言葉の安心感には勝てないですねｗｗ</p> <p><ins data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9835503912749997" data-ad-slot="5019903878" class="adsbygoogle" style="display:block;text-align:center;"></ins> <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p> <h2 id="拡張機能"><a href="#拡張機能" class="header-anchor">#</a> 拡張機能</h2> <p>拡張機能に関しては、Microsoft StoreからEdge用のアドオンが入手できるほか、
+設定をいじることでChromeの拡張機能も入れられるようです。</p> <p>ただし、Chrome用拡張機能は動作保証対象外で、実際にセキュリティ系アプリなど動作しないものもあるみたいです。</p> <h2 id="総評"><a href="#総評" class="header-anchor">#</a> 総評</h2> <ul><li>UIはChromeと同等</li> <li>プライバシーはChrome以上Firefox未満？</li> <li>MS Storeから拡張機能が提供されてる。Chromeとも一部互換性あり</li></ul> <p>といったところで、思ったよりも良い塩梅でまとまったブラウザなんじゃないかと思います。</p> <p>今のChromeやFirefoxで特段不満が無い人は特に乗り換える必要も無いですが、
+今までIEやEdgeが標準で入ってたからとそのまま使ってる人にとっては、
+かなり良いブラウザになったんじゃないかと思います。</p></div> <div class="content__footer"><div class="content__footer--text">この記事をシェア</div> <div class="content__footer--buttons"><!----></div></div></article> <Adsense data-ad-slot="3295758663" data-ad-format="auto" data-ad-client="ca-pub-9835503912749997" data-full-width-responsive="true" style="display:block;"></Adsense> <section class="post-meta main-div" data-v-24dc112d><section class="post-date clearfix" data-v-24dc112d><span class="create-date" data-v-24dc112d>
+      作成日 : 2020-02-07
+    </span> <span class="update-date" data-v-24dc112d>
+      更新日 : 2020-08-05
+    </span></section> <section class="post-links" data-v-24dc112d><a href="/posts/2020/01/24.html" class="post-link" data-v-24dc112d>
+      前の記事 : Twitterシェアボタンを設置しました！
+    </a> <a href="/posts/2020/02/12.html" class="post-link" data-v-24dc112d>
+      次の記事 : 数億円規模の案件を たった二人で開発させられた話
+    </a></section></section> <!----></div></main> <aside class="aside" data-v-36f1d234><div class="info-card main-div" data-v-582db4f8 data-v-36f1d234><div class="info-card-header" data-v-582db4f8><img src="/masaki_talking.png" alt="Masaki" class="info-avatar" data-v-582db4f8> <div class="info-card-profile" data-v-582db4f8><section class="info-nickname" data-v-582db4f8>
+        Masaki
+      </section> <section class="info-contact" data-v-582db4f8><section data-v-582db4f8><span title="大阪府" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>大阪府</title><use xlink:href="#icon-location" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            大阪府
+          </span></span></section> <section data-v-582db4f8><span title="Webエンジニア" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>Webエンジニア</title><use xlink:href="#icon-organization" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            Webエンジニア
+          </span></span></section> <section data-v-582db4f8><span title="32" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>32</title><use xlink:href="#icon-cake" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            32歳
+          </span></span></section> <!----></section></div></div> <div class="info-card-body" data-v-582db4f8><section class="info-desc" data-v-582db4f8>関西のフリーランスWebエンジニア。<br />
+PHPとVue.jsに関する技術や、フリーランスについての情報を書いていきます。</section></div> <div class="info-card-footer" data-v-582db4f8><section class="info-sns clearfix" data-v-582db4f8><a href="https://github.com/plusone-masaki" target="_blank" class="sns-link" data-v-582db4f8><span title="GitHub: plusone-masaki" class="sns-icon" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1.5em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>GitHub: plusone-masaki</title><use xlink:href="#icon-github" data-v-582db4f8 data-v-582db4f8></use></svg></span></a><a href="https://twitter.com/plus_one_masaki" target="_blank" class="sns-link" data-v-582db4f8><span title="Twitter: plus_one_masaki" class="sns-icon" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1.5em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>Twitter: plus_one_masaki</title><use xlink:href="#icon-twitter" data-v-582db4f8 data-v-582db4f8></use></svg></span></a></section></div></div> <div class="category-nav-card main-div" data-v-5034cdd6 data-v-36f1d234><div class="category-nav-title" data-v-5034cdd6>カテゴリ一覧</div> <ul class="category-nav-items" data-v-5034cdd6><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/Web制作.html" class="category-nav-link" data-v-5034cdd6>
+          Web制作
+          <small data-v-5034cdd6>(5)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/プログラミング.html" class="category-nav-link" data-v-5034cdd6>
+          プログラミング
+          <small data-v-5034cdd6>(2)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/インフラ.html" class="category-nav-link" data-v-5034cdd6>
+          インフラ
+          <small data-v-5034cdd6>(1)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/その他.html" class="category-nav-link" data-v-5034cdd6>
+          その他
+          <small data-v-5034cdd6>(5)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/デザイン.html" class="category-nav-link" data-v-5034cdd6>
+          デザイン
+          <small data-v-5034cdd6>(1)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/個人開発.html" class="category-nav-link" data-v-5034cdd6>
+          個人開発
+          <small data-v-5034cdd6>(2)</small></a></li></ul></div> <div class="category-nav-card main-div" data-v-e5c1a8f0 data-v-36f1d234><div class="category-nav-title" data-v-e5c1a8f0>タグ一覧</div> <div class="tags" data-v-e5c1a8f0><a href="/posts/tags/Vue.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Vue.js
+          <small data-v-e5c1a8f0>(6)</small></span></a><a href="/posts/tags/Vuepress.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Vuepress
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/Github Pages.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Github Pages
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/サーバ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          サーバ
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/セキュリティ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          セキュリティ
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/ブラウザ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          ブラウザ
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/フリーランス.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          フリーランス
+          <small data-v-e5c1a8f0>(4)</small></span></a><a href="/posts/tags/HTML/CSS.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          HTML/CSS
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/PHP.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          PHP
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/Laravel.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Laravel
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/ライブラリ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          ライブラリ
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/AWS.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          AWS
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/Nuxt.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Nuxt.js
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/業界知識.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          業界知識
+          <small data-v-e5c1a8f0>(2)</small></span></a></div></div> <!----> <div class="post-nav-card" data-v-36f1d234><div class="main-div"><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>目次</span> <div class="post-nav-toc"><ul><li><a href="/posts/2020/02/07.html#前置き">前置き</a></li><li><a href="/posts/2020/02/07.html#使い勝手">使い勝手</a></li><li><a href="/posts/2020/02/07.html#プライバシーとセキュリティ">プライバシーとセキュリティ</a></li><li><a href="/posts/2020/02/07.html#拡張機能">拡張機能</a></li><li><a href="/posts/2020/02/07.html#総評">総評</a></li></ul></div></div> <!----></div> <Adsense ins-class="adsbygoogle" data-ad-slot="1506010753" data-ad-format="auto" data-ad-client="ca-pub-9835503912749997" data-full-width-responsive="true" style="display:block;"></Adsense></div></aside></div> <footer class="footer" data-v-1220ad48><p class="footer-sns-links" data-v-1220ad48><a href="https://github.com/plusone-masaki" target="_blank" class="sns-link" data-v-1220ad48><span title="GitHub: plusone-masaki" class="sns-icon" data-v-1220ad48 data-v-1220ad48><svg class="icon" style="font-size:25px;" data-v-1220ad48 data-v-1220ad48><title data-v-1220ad48 data-v-1220ad48>GitHub: plusone-masaki</title><use xlink:href="#icon-github" data-v-1220ad48 data-v-1220ad48></use></svg></span></a><a href="https://twitter.com/plus_one_masaki" target="_blank" class="sns-link" data-v-1220ad48><span title="Twitter: plus_one_masaki" class="sns-icon" data-v-1220ad48 data-v-1220ad48><svg class="icon" style="font-size:25px;" data-v-1220ad48 data-v-1220ad48><title data-v-1220ad48 data-v-1220ad48>Twitter: plus_one_masaki</title><use xlink:href="#icon-twitter" data-v-1220ad48 data-v-1220ad48></use></svg></span></a></p> <!----> <!----></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.d58d3548.js" defer></script><script src="/assets/js/10.b08ee81d.js" defer></script><script src="/assets/js/21.e96ada51.js" defer></script>
+  </body>
+</html>
