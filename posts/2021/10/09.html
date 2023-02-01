@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Next.jsで勤怠管理システムを作ってみた | Plus one</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <script data-ad-client="ca-pub-9835503912749997" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async="true"></script>
+    <meta name="description" content="フリーランスWebエンジニアMasakiの技術ブログ">
+    <meta property="article:published_time" content="2021-10-09T20:02:00.000Z">
+    <meta property="article:modified_time" content="2023-02-01T05:19:48.000Z">
+    <meta property="og:site_name" content="Plus one">
+    <meta property="og:title" content="Next.jsで勤怠管理システムを作ってみた">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/posts/2021/10/09.html">
+    <meta property="og:image" content="https://res.cloudinary.com/plus-one-tech/image/upload/l_text:Sawarabi%20Gothic_36_bold:Next.jsで勤怠管理システムを作ってみた,co_rgb:568,y_-24,w_512,c_fit/v1588954091/plusone_tech_ogp.png">
+    <meta name="twitter:title" content="Next.jsで勤怠管理システムを作ってみた">
+    <meta name="twitter:url" content="/posts/2021/10/09.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://res.cloudinary.com/plus-one-tech/image/upload/l_text:Sawarabi%20Gothic_36_bold:Next.jsで勤怠管理システムを作ってみた,co_rgb:568,y_-24,w_512,c_fit/v1588954091/plusone_tech_ogp.png">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="React, Next.js, firebase">
+    <meta property="article:tag" content="React">
+    <meta property="twitter:site" content="@plus_one_masaki">
+    <meta property="fb:app_id" content="275537106407219">
+    <link rel="preload" href="/assets/css/0.styles.b1270e85.css" as="style"><link rel="preload" href="/assets/js/app.cfb5b8bb.js" as="script"><link rel="preload" href="/assets/js/10.b08ee81d.js" as="script"><link rel="preload" href="/assets/js/39.938aab41.js" as="script"><link rel="prefetch" href="/assets/js/1.81595cb2.js"><link rel="prefetch" href="/assets/js/11.df53a5f1.js"><link rel="prefetch" href="/assets/js/12.9acec07f.js"><link rel="prefetch" href="/assets/js/13.bf5d61d6.js"><link rel="prefetch" href="/assets/js/14.f78eeef3.js"><link rel="prefetch" href="/assets/js/15.d8cd59f7.js"><link rel="prefetch" href="/assets/js/16.551fb714.js"><link rel="prefetch" href="/assets/js/17.21d87462.js"><link rel="prefetch" href="/assets/js/18.3c5d0881.js"><link rel="prefetch" href="/assets/js/19.faa3d6d0.js"><link rel="prefetch" href="/assets/js/20.daa17a5e.js"><link rel="prefetch" href="/assets/js/21.e96ada51.js"><link rel="prefetch" href="/assets/js/22.754d0b93.js"><link rel="prefetch" href="/assets/js/23.7845d321.js"><link rel="prefetch" href="/assets/js/24.353f0965.js"><link rel="prefetch" href="/assets/js/25.b5fe7aea.js"><link rel="prefetch" href="/assets/js/26.892b0680.js"><link rel="prefetch" href="/assets/js/27.3de3583b.js"><link rel="prefetch" href="/assets/js/28.c99205f2.js"><link rel="prefetch" href="/assets/js/29.fbf74caf.js"><link rel="prefetch" href="/assets/js/3.200b6217.js"><link rel="prefetch" href="/assets/js/30.8137446f.js"><link rel="prefetch" href="/assets/js/31.8646e7f2.js"><link rel="prefetch" href="/assets/js/32.e45ae4be.js"><link rel="prefetch" href="/assets/js/33.1e3ae32d.js"><link rel="prefetch" href="/assets/js/34.f20d3c01.js"><link rel="prefetch" href="/assets/js/35.22b63e17.js"><link rel="prefetch" href="/assets/js/36.6b8c985a.js"><link rel="prefetch" href="/assets/js/37.90f79f46.js"><link rel="prefetch" href="/assets/js/38.433771e5.js"><link rel="prefetch" href="/assets/js/4.b222e359.js"><link rel="prefetch" href="/assets/js/40.b3b67d00.js"><link rel="prefetch" href="/assets/js/41.a5932c2c.js"><link rel="prefetch" href="/assets/js/42.503c4d16.js"><link rel="prefetch" href="/assets/js/43.9106ea0c.js"><link rel="prefetch" href="/assets/js/44.50973597.js"><link rel="prefetch" href="/assets/js/45.68acb294.js"><link rel="prefetch" href="/assets/js/5.db228212.js"><link rel="prefetch" href="/assets/js/6.009be067.js"><link rel="prefetch" href="/assets/js/7.89a913f6.js"><link rel="prefetch" href="/assets/js/8.dddd115d.js"><link rel="prefetch" href="/assets/js/9.63cfa784.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b1270e85.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-meteorlxy"><header class="header" data-v-aa0aa392><div data-v-2d8d321e data-v-aa0aa392><nav class="navbar" data-v-2d8d321e><div class="container" data-v-2d8d321e><a href="/" class="router-link-active" data-v-2d8d321e><img src="/logo.png" alt="Plus one" class="logo" data-v-2d8d321e> <!----></a> <div class="navbar-toggler" data-v-2d8d321e><svg class="icon" style="font-size:2rem;" data-v-2d8d321e data-v-2d8d321e><title data-v-2d8d321e data-v-2d8d321e>menu</title><use xlink:href="#icon-menu" data-v-2d8d321e data-v-2d8d321e></use></svg></div> <div class="navbar-links" data-v-2d8d321e><a href="/" class="navbar-link" data-v-2d8d321e>
+            Home
+          </a><a href="/about/" class="navbar-link" data-v-2d8d321e>
+            About
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-2d8d321e>
+            Blog
+          </a><a href="/products/" class="navbar-link" data-v-2d8d321e>
+            Products
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-2d8d321e></div></div></header> <div class="container clearfix show-aside" data-v-36f1d234 data-v-36f1d234><main class="main" data-v-36f1d234><div class="post" data-v-36f1d234 data-v-36f1d234><section class="post-meta main-div" data-v-24dc112d><section class="post-date clearfix" data-v-24dc112d><span class="create-date" data-v-24dc112d>
+      作成日 : 2021-10-09
+    </span> <span class="update-date" data-v-24dc112d>
+      更新日 : 2023-02-01
+    </span></section> <section class="post-links" data-v-24dc112d><a href="/posts/2021/06/22.html" class="post-link" data-v-24dc112d>
+      前の記事 : CSV+をプレリリースしました！
+    </a> <a href="/posts/2022/03/09.html" class="post-link" data-v-24dc112d>
+      次の記事 : ドキュメント作成の有用性
+    </a></section></section> <article class="main-div"><div class="post-content content content__default"><h1 id="next-jsで勤怠管理システムを作ってみた"><a href="#next-jsで勤怠管理システムを作ってみた" class="header-anchor">#</a> Next.jsで勤怠管理システムを作ってみた</h1> <p>お久しぶりです。
+忙しさを言い訳にだいぶ更新をサボってしまってました(;^_^A汗)</p> <p>さて、僕はフリーランスエンジニアなんですけど、主に <strong>準委任契約</strong> でお取引させていただくことが多く、
+勤怠表の提出を求められる立場でして。</p> <p>今までは取引先さんの提供するWebシステムにポチポチ入力するだけだったんですけど、
+そういったものを提供していない会社さんとお取引させていただく場合、 <strong>Excelに作業実績を記入していく</strong>
+という方法を取っていることが多いと思うんですが...</p> <p>.
+.
+.</p> <p class="x-large red">そんなんめんどいですぅ～～ｗｗｗ</p> <p class="x-large red">っていうかぼくのPCにExcelはインストールされてませんから～～～ｗｗｗ</p> <p>ってことで、 <strong>勤怠管理をシステム化しよう計画</strong> を立ち上げました。</p> <h2 id="技術選定"><a href="#技術選定" class="header-anchor">#</a> 技術選定</h2> <p>表題の通り、今回は前々から勉強しようと思っていた <strong>React</strong> で開発をすることにしました。</p> <p>複数ページにわたるWebシステムなので、フレームワークを利用するのが良いだろうということでNext.js。</p> <p>スタイリングに時間をかけたくないのでUIコンポーネントセットに Material UI を採用しました。</p> <br> <p>個人で使うだけの簡易的なシステムに維持費をかけたくないので、DBもサーバも無料で使えるものということで、 firebase を採用！</p> <p>DBは firestore, サーバは firebase hosting を使っていきます！</p> <p>...と思ったんですが、<span class="large red">Next.jsは静的ホスティングにほとんど対応できてないらしいです</span> <small><s>クソですね</s></small></p> <p>Next.js でSSGとか騒がれてたから普通に静的出力できるもんだと思ってたんですけど、
+ほんとにただの静的HTMLが出力されるだけで、Nuxt.js のHydration機能みたいなのは無かったみたいです。</p> <p>ってことで、WebサーバにはNext.jsとの親和性が高いVercelを採用することになりました。</p> <h2 id="雑に設計"><a href="#雑に設計" class="header-anchor">#</a> 雑に設計</h2> <blockquote data-lang="ja" class="twitter-tweet"><p lang="ja" dir="ltr">スマホでパパっと画面構成とAPI設計作ってみた。<br>けど作るのだるいなー<br>これもReactとGCPの勉強のためと思って頑張るか… <a href="https://t.co/VAAJm2U1UG">pic.twitter.com/VAAJm2U1UG</a></p>— Masaki@Web技術者 (@plus_one_masaki) <a href="https://twitter.com/plus_one_masaki/status/1434865085948719110?ref_src=twsrc%5Etfw">2021年9月6日</a></blockquote> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <p>スマホで思いついた内容を簡単に書き出し。
+画面構成とDB・API設計をマークダウン形式でざっとリストアップしました。
+かかった時間は～30分程度ですかね。</p> <p>この程度の走り書きでも開発の方針を決める重要な手順です。
+個人開発を行う人は必ず設計をしてからコーディングに入りましょうね。</p> <h2 id="uiの作成"><a href="#uiの作成" class="header-anchor">#</a> UIの作成</h2> <p>設計できてから3日後...</p> <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">雑にUIのみ2画面作った<br>こういう自分で使うだけの書き捨て系のサービスなんかは適当でいいのよ適当で <a href="https://t.co/EAAmiTiVMs">https://t.co/EAAmiTiVMs</a> <a href="https://t.co/jAsn6cDJcB">pic.twitter.com/jAsn6cDJcB</a></p>— Masaki@Web技術者 (@plus_one_masaki) <a href="https://twitter.com/plus_one_masaki/status/1435964348908724238?ref_src=twsrc%5Etfw">September 9, 2021</a></blockquote> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <p>さらにそこから4日後...</p> <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今のところの進捗はこんな感じ。おおよそUI完成？<br>API連携部分はできてないけど動作も込みで作ってるから、バックエンドとの繋ぎ込みとロジック作ったらフロントエンドの作業は終わるかな<br><br>といってもここから考慮漏れ等が出てくるんだけど。 <a href="https://t.co/SFlpiouTUg">https://t.co/SFlpiouTUg</a> <a href="https://t.co/QEcGDWOfUL">pic.twitter.com/QEcGDWOfUL</a></p>— Masaki@Web技術者 (@plus_one_masaki) <a href="https://twitter.com/plus_one_masaki/status/1437344230372900869?ref_src=twsrc%5Etfw">September 13, 2021</a></blockquote> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <p>善は急がないとモチベーションが維持できないタイプなので、サクサク作っていきます。</p> <p>さすがはフロントエンドの実装スピードに定評のあるMasaki、
+ほとんど使ったことのないReactでもサクサクページが作れちゃう。およそ一週間くらいで必要なページの大半ができました。</p> <p>UIを作るだけならReactもVueも慣れによるものくらいでほとんど違いはないですね。</p> <p>ダミーデータなのでAPIコールや計算などは含んでいませんが、
+その分シンプルに組みあがっているので肉付けをするだけですぐ動きそうです。</p> <h2 id="db連携"><a href="#db連携" class="header-anchor">#</a> DB連携</h2> <p>DBはfirestoreを使ったんですが、これが意外と曲者。 環境構築がイマイチ慣れない感じで時間を食いましたね。</p> <p>ただ組み込んでしまえば難しいことはなく、設計したAPIのフォーマットがそのままスキーマにできるNoSQLはSPAとの相性が非常に良かったです。</p> <h2 id="そんなこんなでアプリはほぼ完成"><a href="#そんなこんなでアプリはほぼ完成" class="header-anchor">#</a> そんなこんなでアプリはほぼ完成</h2> <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">だいたい動いてる感じするぞ。<br>印刷にも対応。あとはテストしたらデプロイして完了かな？ <a href="https://t.co/pdpfF4bHAq">https://t.co/pdpfF4bHAq</a> <a href="https://t.co/9ZdW8Dya3i">pic.twitter.com/9ZdW8Dya3i</a></p>— Masaki@Web技術者 (@plus_one_masaki) <a href="https://twitter.com/plus_one_masaki/status/1442489557690187784?ref_src=twsrc%5Etfw">September 27, 2021</a></blockquote> <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <p>まだバグの洗い出しなどが残っているものの、計画からおよそ20日で開発はだいたい完成。</p> <p>ここからはデプロイのための調整なんですが、 <span class="large red">ここで firebase hosting に対応させるために様々な試行錯誤をするはめに...</span></p> <p>どんな問題があったかというと、主にSSG関連なんですが</p> <ul><li>Next.js のSSGでは <strong>i18n（多言語対応ライブラリ）が使用できない</strong> <ul><li>主に文言の管理にしか使ってないんですが、個人的に必須級のライブラリなのにこれは痛すぎる</li> <li>結局、文言出力用のヘルパを自作することでなんとか対応。</li></ul></li> <li>Next.js のSSGでは <code>/projects/{projectId}</code> のように動的なパスを出力できない
+<ul><li>静的な出力なんだから当然といえば当然、けどNuxtはそういうの対応してるんだよなぁ...</li> <li>Vercelサーバを使う場合に限って動的パスにも対応するってスタンスらしいです。こういうやり方嫌い。</li></ul></li></ul> <p>といった問題点があり、 <strong>俺の中で Next.js の評価がダウンしましたｗｗｗ</strong></p> <p>まぁなんやかんやありまして、冒頭でも説明した通り <strong>Vercel</strong> のサービスを使うことにして無事デプロイ完了。</p> <h2 id="細かい調整やバグを潰し、実稼働！"><a href="#細かい調整やバグを潰し、実稼働！" class="header-anchor">#</a> 細かい調整やバグを潰し、実稼働！</h2> <p>そして出来上がったのがこちら。</p> <p><img src="/images/202110/kintai.png" alt="kintai"></p> <p>印刷プレビューや認証周りの最適化などを行い、10月の稼働分から運用開始！
+仕事の合間にちょこちょこやって丁度一か月で運用まで乗せられました。</p> <p>必要な機能を網羅しつつ、省くところは省きましたが、なかなかのスピード感じゃないでしょうか。</p> <h2 id="react-next-js-を使ってみた感想"><a href="#react-next-js-を使ってみた感想" class="header-anchor">#</a> React/Next.js を使ってみた感想</h2> <p>React/Next.jsを使ってみた感想としては、
+書き味としてはReactもVueも慣れればさほど違いはなく、スイッチしやすい技術だと感じましたね。</p> <p><a href="/posts/2021/02/27.html">過去記事</a> でVueを結構disってたんですが、
+Reactを触ってみた結果、思ったよりもReactに優位性を感じないという感想になりました...</p> <p>Reactが後方互換性を維持しつつバージョンアップしてる点については高評価な一方で、
+Vue3にターゲットを絞って比較をすると、どちらも同じくらいすっきり書けます。</p> <p>またフレームワークであるNextとNuxtで比べた時、Nuxt.jsの方が柔軟で高機能な印象がありました。
+Next.js は SSG の設計思想を間違えたのか単純に発展途上なのかわかりませんが、
+静的ホスティングで利用する用途においてはバグや機能が足りておらず、まだまだ採用できそうにないですね。</p> <p>というわけで、VueとReactどちらを使うのがいいかと問われた場合、
+エンジニアを採用する場合なら流行ってる方（今だとどっちもどっちかなぁ）。
+僕個人としてはVue/Nuxtをお勧めしつつ、Reactに慣れてる人が多いならそっちでもいいよ！ってスタンスですかね。</p></div> <div class="content__footer"><div class="content__footer--text">この記事をシェア</div> <div class="content__footer--buttons"><!----></div></div></article> <Adsense data-ad-slot="3295758663" data-ad-format="auto" data-ad-client="ca-pub-9835503912749997" data-full-width-responsive="true" style="display:block;"></Adsense> <section class="post-meta main-div" data-v-24dc112d><section class="post-date clearfix" data-v-24dc112d><span class="create-date" data-v-24dc112d>
+      作成日 : 2021-10-09
+    </span> <span class="update-date" data-v-24dc112d>
+      更新日 : 2023-02-01
+    </span></section> <section class="post-links" data-v-24dc112d><a href="/posts/2021/06/22.html" class="post-link" data-v-24dc112d>
+      前の記事 : CSV+をプレリリースしました！
+    </a> <a href="/posts/2022/03/09.html" class="post-link" data-v-24dc112d>
+      次の記事 : ドキュメント作成の有用性
+    </a></section></section> <!----></div></main> <aside class="aside" data-v-36f1d234><div class="info-card main-div" data-v-582db4f8 data-v-36f1d234><div class="info-card-header" data-v-582db4f8><img src="/masaki_talking.png" alt="Masaki" class="info-avatar" data-v-582db4f8> <div class="info-card-profile" data-v-582db4f8><section class="info-nickname" data-v-582db4f8>
+        Masaki
+      </section> <section class="info-contact" data-v-582db4f8><section data-v-582db4f8><span title="日本" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>日本</title><use xlink:href="#icon-location" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            日本
+          </span></span></section> <section data-v-582db4f8><span title="Webエンジニア" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>Webエンジニア</title><use xlink:href="#icon-organization" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            Webエンジニア
+          </span></span></section> <section data-v-582db4f8><span title="35" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>35</title><use xlink:href="#icon-cake" data-v-582db4f8 data-v-582db4f8></use></svg><span class="info-text" data-v-582db4f8 data-v-582db4f8>
+            35歳
+          </span></span></section> <!----></section></div></div> <div class="info-card-body" data-v-582db4f8><section class="info-desc" data-v-582db4f8>フリーランスWebエンジニア。<br />
+PHPとVue.jsに関する技術や、フリーランスについての情報を書いていきます。</section></div> <div class="info-card-footer" data-v-582db4f8><section class="info-sns clearfix" data-v-582db4f8><a href="https://github.com/plusone-masaki" target="_blank" class="sns-link" data-v-582db4f8><span title="GitHub: plusone-masaki" class="sns-icon" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1.5em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>GitHub: plusone-masaki</title><use xlink:href="#icon-github" data-v-582db4f8 data-v-582db4f8></use></svg></span></a><a href="https://twitter.com/plus_one_masaki" target="_blank" class="sns-link" data-v-582db4f8><span title="Twitter: plus_one_masaki" class="sns-icon" data-v-582db4f8 data-v-582db4f8><svg class="icon" style="font-size:1.5em;" data-v-582db4f8 data-v-582db4f8><title data-v-582db4f8 data-v-582db4f8>Twitter: plus_one_masaki</title><use xlink:href="#icon-twitter" data-v-582db4f8 data-v-582db4f8></use></svg></span></a></section></div></div> <div class="category-nav-card main-div" data-v-5034cdd6 data-v-36f1d234><div class="category-nav-title" data-v-5034cdd6>カテゴリ一覧</div> <ul class="category-nav-items" data-v-5034cdd6><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/Web制作.html" class="category-nav-link" data-v-5034cdd6>
+          Web制作
+          <small data-v-5034cdd6>(5)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/プログラミング.html" class="category-nav-link" data-v-5034cdd6>
+          プログラミング
+          <small data-v-5034cdd6>(9)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/インフラ.html" class="category-nav-link" data-v-5034cdd6>
+          インフラ
+          <small data-v-5034cdd6>(1)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/その他.html" class="category-nav-link" data-v-5034cdd6>
+          その他
+          <small data-v-5034cdd6>(6)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/デザイン.html" class="category-nav-link" data-v-5034cdd6>
+          デザイン
+          <small data-v-5034cdd6>(2)</small></a></li><li class="category-nav-item" data-v-5034cdd6><a href="/posts/categories/個人開発.html" class="category-nav-link" data-v-5034cdd6>
+          個人開発
+          <small data-v-5034cdd6>(2)</small></a></li></ul></div> <div class="category-nav-card main-div" data-v-e5c1a8f0 data-v-36f1d234><div class="category-nav-title" data-v-e5c1a8f0>タグ一覧</div> <div class="tags" data-v-e5c1a8f0><a href="/posts/tags/Vue.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Vue.js
+          <small data-v-e5c1a8f0>(8)</small></span></a><a href="/posts/tags/Vuepress.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Vuepress
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/Github Pages.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Github Pages
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/サーバ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          サーバ
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/セキュリティ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          セキュリティ
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/ブラウザ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          ブラウザ
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/フリーランス.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          フリーランス
+          <small data-v-e5c1a8f0>(6)</small></span></a><a href="/posts/tags/HTML/CSS.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          HTML/CSS
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/PHP.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          PHP
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/Laravel.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Laravel
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/ライブラリ.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          ライブラリ
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/AWS.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          AWS
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/Nuxt.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Nuxt.js
+          <small data-v-e5c1a8f0>(4)</small></span></a><a href="/posts/tags/業界知識.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          業界知識
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/設計手法.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          設計手法
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/Node.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Node.js
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/テスト.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          テスト
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/CI/CD.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          CI/CD
+          <small data-v-e5c1a8f0>(2)</small></span></a><a href="/posts/tags/個人開発.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          個人開発
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/React.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          React
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/Next.js.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          Next.js
+          <small data-v-e5c1a8f0>(1)</small></span></a><a href="/posts/tags/firebase.html" class="tag" data-v-e5c1a8f0><span class="tag-link" data-v-e5c1a8f0><svg class="icon" style="font-size:1x;" data-v-e5c1a8f0><title data-v-e5c1a8f0>tag</title><use xlink:href="#icon-tag" data-v-e5c1a8f0></use></svg>
+          firebase
+          <small data-v-e5c1a8f0>(1)</small></span></a></div></div> <!----> <div class="post-nav-card" data-v-36f1d234><div class="main-div"><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>目次</span> <div class="post-nav-toc"><ul><li><a href="/posts/2021/10/09.html#技術選定">技術選定</a></li><li><a href="/posts/2021/10/09.html#雑に設計">雑に設計</a></li><li><a href="/posts/2021/10/09.html#uiの作成">UIの作成</a></li><li><a href="/posts/2021/10/09.html#db連携">DB連携</a></li><li><a href="/posts/2021/10/09.html#そんなこんなでアプリはほぼ完成">そんなこんなでアプリはほぼ完成</a></li><li><a href="/posts/2021/10/09.html#細かい調整やバグを潰し、実稼働！">細かい調整やバグを潰し、実稼働！</a></li><li><a href="/posts/2021/10/09.html#react-next-js-を使ってみた感想">React/Next.js を使ってみた感想</a></li></ul></div></div> <!----></div> <Adsense ins-class="adsbygoogle" data-ad-slot="1506010753" data-ad-format="auto" data-ad-client="ca-pub-9835503912749997" data-full-width-responsive="true" style="display:block;"></Adsense></div></aside></div> <footer class="footer" data-v-1220ad48><p class="footer-sns-links" data-v-1220ad48><a href="https://github.com/plusone-masaki" target="_blank" class="sns-link" data-v-1220ad48><span title="GitHub: plusone-masaki" class="sns-icon" data-v-1220ad48 data-v-1220ad48><svg class="icon" style="font-size:25px;" data-v-1220ad48 data-v-1220ad48><title data-v-1220ad48 data-v-1220ad48>GitHub: plusone-masaki</title><use xlink:href="#icon-github" data-v-1220ad48 data-v-1220ad48></use></svg></span></a><a href="https://twitter.com/plus_one_masaki" target="_blank" class="sns-link" data-v-1220ad48><span title="Twitter: plus_one_masaki" class="sns-icon" data-v-1220ad48 data-v-1220ad48><svg class="icon" style="font-size:25px;" data-v-1220ad48 data-v-1220ad48><title data-v-1220ad48 data-v-1220ad48>Twitter: plus_one_masaki</title><use xlink:href="#icon-twitter" data-v-1220ad48 data-v-1220ad48></use></svg></span></a></p> <!----> <!----></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.cfb5b8bb.js" defer></script><script src="/assets/js/10.b08ee81d.js" defer></script><script src="/assets/js/39.938aab41.js" defer></script>
+  </body>
+</html>
