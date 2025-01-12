@@ -1,0 +1,1 @@
+import{d as o,q as s,G as n}from"./lji2BBP2.js";const i=o({__name:"[day]",setup(y){const{params:a}=s(),r=Array.isArray(a.year)?a.year[0]:a.year,t=Array.isArray(a.month)?a.month[0]:a.month,e=Array.isArray(a.day)?a.day[0]:a.day;return n(`/posts/${r}${t}${e}`,{redirectCode:301}),(c,d)=>null}});export{i as default};
